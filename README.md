@@ -1,4 +1,4 @@
-# SMCC-CCIS Week 2025 – Campus Event Showcase
+# SMCC-CCIS Week 2026 – Campus Event Showcase
 
 ## Overview
 This project is a simple HTML5 website created for the SMCC-CCIS Week 2025 event. It demonstrates the use of semantic HTML, CSS styling, forms, multimedia, and JavaScript while providing information about the event.
