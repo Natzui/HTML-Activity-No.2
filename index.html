@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMCC-CCIS Week 2025 – Campus Event Showcase and Registration</title>
 
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/logo.jpg">
 
     <style>
         body {
@@ -41,6 +41,21 @@
             font-weight: bold;
         }
 
+        .btn {
+        background-color: #0b8500;
+        color: white;
+        border: none;
+        padding: 10px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+        }       
+    
+        .btn:hover {
+
+        background-color: #0065c3;
+        }
+
         .container {
             display: flex;
             flex-wrap: wrap;
@@ -50,14 +65,6 @@
 
         .main-section {
             flex: 3 1 250px;
-        }
-
-        .sidebar {
-            flex: 1 1 200px;
-            background-color: #ffffff;
-            border-radius: 6px;
-            padding: 15px;
-            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
         }
 
         .card {
@@ -201,7 +208,8 @@
 
             document.getElementById("event-form").reset();
         }
-    </script>
+    function toggleFAQ(){const f=document.getElementById("faq-content");f.style.display=(f.style.display==="none")?"block":"none";}
+</script>
 </head>
 
 <body id="page-root">
@@ -209,302 +217,93 @@
 
         <header id="top-header" class="section-header">
             <h1>SMCC-CCIS Week 2025 – Campus Event Showcase</h1>
-            <p>Celebrating innovation, technology, and collaboration across the campus.&#128526;</p>
+            <p>Celebrating innovation, technology, and collaboration across the campus.</p>
         </header>
 
         <nav>
-            <a href="#layout">Overview</a>
-            <a href="#code">Schedule</a>
-            <a href="#forms">Location </a>
-            <a href="#symbols">Registration</a>
-            <a href="#xhtml">FAQ</a>
-            <a href="techdemo">Tech Demo</a>
+            <a href="#overview">Overview</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#location">Location</a>
+            <a href="#registration">Registration</a>
+            <a href="#faq">FAQ</a>
+            <a href="#tech-demo">Tech Demo</a>
         </nav>
 
         <div class="container">
+        <main class="main-section">
 
-            <section class="main-section">
+        <section id="overview" class="card">
+            <h2>Event Overview</h2>
+            <img src="images/event.jpg" alt="SMCC-CCIS Week 2025 Banner" style="width:100%;max-width:600px;">
+            <p>A week-long campus event showcasing IT innovations, competitions, and student collaboration.</p>
+        </section>
 
-                <article id="layout" class="card">
-                    <h2>Event Schedule</h2>
+        <section id="schedule" class="card"><h2>Event Schedule</h2>
+            <ul><li>Day 1 – Opening Program and Keynote Talks</li>
+                <li>Day 2 – Coding Hackathon</li>
+                <li>Day 3 – Robotics and IoT Exhibition</li>
+                <li>Day 4 – Cybersecurity Awareness Session</li>
+                <li>Day 5 – Project Showcase and Awarding Ceremony</li>
+            </ul>
+        </section>
 
-                    <div class="info-box">
-                        <p>𖤐 Day 1 – Opening Program and Keynote Talks.</p>
-                        <p>𖤐 Day 2 – Coding Hackathon.</p>
-                        <p>𖤐 Day 3 – Robotics and IoT Exhibition.</p>
-                        <p>𖤐 Day 4 – Cybersecurity Awareness Session.</p>
-                        <p>𖤐 Day 5 – Project Showcase and Awarding Ceremony.</p>
-                    </div>
+        <section id="location" class="card"><h2>Event Location</h2>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7881.718582540356!2d125.34572240561671!3d8.985092923338632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301ca2f04581cbb%3A0xe4e2656c7835d5f2!2sSaint%20Michael%20College%20of%20Caraga!5e0!3m2!1sen!2sph!4v1782914974163!5m2!1sen!2sph" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
 
-                    <button class="primary-btn" onclick="toggleMessage()">More</button>
+        <section class="card"><h2>Registration</h2>
+            <div class="code-block">https://myschool.edu/events/register?event=SMCC%20CCIS%20Week%202025&section=A
+            </div>
+        </section>
 
-                    <p id="info-message" class="hidden-message">
-                        𖤐 Day 6 – For Party and Drinking.
-                    </p>
-                </article>
+        <section id="registration" class="card">
+            <h2>Online Registration Form</h2>
+            <form>
+                <input type="text" placeholder="Full Name" required minlength="3">
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Student ID" pattern="[0-9]{6,12}" required>
+                <select required>
+                    <option value="">Year Level</option>
+                    <option>1st Year</option>
+                    <option>2nd Year</option>
+                    <option>3rd Year</option>
+                    <option>4th Year</option>
+                </select>
+                <label><input type="checkbox"> Coding Hackathon</label>
+                <label><input type="checkbox"> Tech Quiz Bowl</label>
+                <label><input type="checkbox"> Project Showcase</label>
+                <textarea placeholder="Reason for joining" required></textarea>
+                <button type="submit" class="btn">Submit</button>
+                <button type="reset" class="btn">Clear</button>
+            </form>
+        </section>
 
-                <article class="card">
-                    <h2>2.Event Location and Map</h2>
-                    <p>
-                        Location of the Event. </p>
+        <section id="faq" class="card">
+            <h2>FAQ</h2>
+            <p><b>Q:</b>1.When is the registration deadline?</p>
+            <p><b>Q:</b>2. Is there a registration fee?</p>
+            <button onclick="toggleFAQ()" class="btn">Toggle FAQ</button>
+            <div id="faq-content">
+                <p><b>A.</b>1. August 14, 2025.</p>
+                <p><b>A.:</b>2. No, it is free for all students.</p>
+            </div>
+        </section>
 
-                    <div style="position:relative; padding-bottom:20%; height:0; overflow:hidden; border-radius:8px;">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3410.9445123306796!2d125.34181503323163!3d8.986501755237665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301ca2f04581cbb%3A0xe4e2656c7835d5f2!2sSaint%20Michael%20College%20of%20Caraga!5e0!3m2!1sen!2sph!4v1782900891968!5m2!1sen!2sph" width="650" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                    </div>
-                </article>
+        <section id="tech-demo" class="card">
+            <h2>Tech Demo</h2>
+            <pre><code>console.log("Hello SMCC CCIS Week");</code></pre>
+            Press <kbd>Ctrl</kbd> + <kbd>S</kbd>
+            <p><samp>Output: Build successful</samp></p>
+        </section>
 
-                <article class="card">
-                    <h2>3. File Paths and Relative Image</h2>
-                    <p>
-                        The image below is loaded from a <em>relative file path</em>:
-                        <code>images/profile.jpg</code>.
-                    </p>
-
-                    <img
-                        src="images/mark.jpg"
-                        alt="Sample profile photo"
-                        style="max-width: 160px; border-radius: 10%; border: 3px solid #004b8d;">
-                </article>
-
-                <article id="forms" class="card">
-                    <h2>4. HTML Forms</h2>
-
-                    <p>
-                        HTML forms allow users to submit information such as event registrations,
-                        login credentials, surveys, and feedback. HTML5 also provides built-in
-                        validation features that help ensure correct user input.
-                    </p>
-
-                    <form id="event-form" onsubmit="registerStudent(event)">
-
-                        <div class="form-row">
-                            <div>
-                                <label for="fullname">Full Name</label>
-                                <input
-                                    type="text"
-                                    id="fullname"
-                                    name="fullname"
-                                    placeholder="Enter your full name"
-                                    required
-                                    minlength="5">
-                            </div>
-
-                            <div>
-                                <label for="email">Email Address</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    placeholder="example@gmail.com"
-                                    required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div>
-                                <label for="studentid">Student ID</label>
-                                <input
-                                    type="text"
-                                    id="studentid"
-                                    name="studentid"
-                                    placeholder="202600123"
-                                    required
-                                    pattern="[0-9]{9}"
-                                    title="Student ID should contain exactly 9 digits.">
-                            </div>
-
-                            <div>
-                                <label for="course">Course</label>
-                                <select id="course" name="course" required>
-                                    <option value="">Select Course</option>
-                                    <option value="BS Information Systems">BS Information Systems</option>
-                                    <option value="BS Computer Science">BS Computer Science</option>
-                                    <option value="BS Information Technology">BS Information Technology</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div>
-                                <label for="birthdate">Birthdate</label>
-                                <input
-                                    type="date"
-                                    id="birthdate"
-                                    name="birthdate"
-                                    required>
-                            </div>
-
-                            <div>
-                                <label for="arrival">Arrival Time</label>
-                                <input
-                                    type="time"
-                                    id="arrival"
-                                    name="arrival"
-                                    required>
-                            </div>
-                        </div>
-
-                        <label>Participant Type</label>
-                        <div class="radio-group">
-                            <label>
-                                <input type="radio" name="participant_type" value="Student" required>
-                                Student
-                            </label>
-
-                            <label>
-                                <input type="radio" name="participant_type" value="Faculty">
-                                Faculty
-                            </label>
-
-                            <label>
-                                <input type="radio" name="participant_type" value="Guest">
-                                Guest
-                            </label>
-                        </div>
-
-                        <label>Activities to Join</label>
-                        <div class="checkbox-group">
-                            <label>
-                                <input type="checkbox" name="activity" value="Coding Contest">
-                                Coding Contest
-                            </label>
-
-                            <label>
-                                <input type="checkbox" name="activity" value="Web Design">
-                                Web Design
-                            </label>
-
-                            <label>
-                                <input type="checkbox" name="activity" value="Robotics">
-                                Robotics
-                            </label>
-
-                            <label>
-                                <input type="checkbox" name="activity" value="Quiz Bowl">
-                                Quiz Bowl
-                            </label>
-                        </div>
-
-                        <label for="schoolid">Upload School ID</label>
-                        <input
-                            type="file"
-                            id="schoolid"
-                            name="schoolid"
-                            accept=".jpg,.jpeg,.png,.pdf">
-
-                        <label for="comments">Comments</label>
-                        <textarea
-                            id="comments"
-                            name="comments"
-                            rows="4"
-                            placeholder="Write your comments..."
-                            maxlength="300"></textarea>
-
-                        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-                            <button class="primary-btn" type="submit">
-                                Submit Registration
-                            </button>
-
-                            <button class="reset-btn" type="reset">
-                                Reset Form
-                            </button>
-                        </div>
-
-                        <p id="form-result" class="success"></p>
-
-                    </form>
-                </article>
-
-                <article id="code" class="card">
-                    <h2>5. Computer Code Tags</h2>
-                    <p>We can show code and computer-related text using special tags:</p>
-
-                    <div class="code-block">
-<pre><code>&lt;pre&gt; and &lt;code&gt; show preformatted code:
-
-</code></pre>
-                    </div>
-
-                    <p>
-                        Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save your file.
-                        Program output example using <code>&lt;samp&gt;</code>:
-                        <samp>Build successful. No errors found.</samp>
-                    </p>
-                </article>
-
-                <article id="symbols" class="card">
-                    <h2>6. Entities, Symbols, Emojis & URL Encoding</h2>
-
-                    <p>
-                        HTML <strong>entities</strong> and <strong>symbols</strong>:
-                        &copy; 2026 InfoHub &mdash; All rights reserved.
-                        Heart symbol: &hearts;
-                        Check symbol: &#10003; (✓)
-                    </p>
-
-                    <p>
-                        Emojis add expression: &#128516;&#128640;&#127793;
-                    </p>
-
-                    <p>
-                        Example of a URL-encoded search query:
-                    </p>
-
-                    <div class="code-block">
-                        <code>https://example.com/search?query=HTML%20Advanced%20Topics%21</code>
-                    </div>
-                </article>
-
-                <article id="xhtml" class="card">
-                    <h2>7. HTML vs XHTML</h2>
-
-                    <p>Below is a simple comparison of HTML and XHTML syntax:</p>
-
-                    <div class="code-block">
-<pre><code>&lt;!-- HTML version not self-closed --&gt;
-&lt;img src="images/profile.jpg" alt="Profile image"&gt;
-
-&lt;!-- XHTML-style version self-closed, lowercase, quoted attributes --&gt;
-&lt;img src="images/profile.jpg" alt="Profile image" /&gt;
-</code></pre>
-                    </div>
-
-                    <p>
-                        XHTML is stricter and requires properly closed tags, lowercase names, and quoted attributes.
-                    </p>
-                </article>
-
-            </section>
-
-            <aside class="sidebar">
-                <h3>Quick Info Panel</h3>
-
-                <p>
-                    This <code>&lt;aside&gt;</code> acts as a sidebar. It demonstrates
-                    how semantic tags improve layout and meaning.
-                </p>
-
-                <p>
-                    This page follows a simple <strong>style guide</strong>:
-                    lowercase tag names, consistent indentation, semantic elements,
-                    meaningful class and ID names, and UTF-8 charset.
-                </p>
-
-                <p>
-                    Character encoding is defined using:
-                </p>
-
-                <div class="code-block">
-                    <code>&lt;meta charset="UTF-8"&gt;</code>
-                </div>
-            </aside>
-
-        </div>
+        <section class="card"><h2>HTML vs XHTML</h2>
+            <p><strong>HTML:</strong></p><img src="images/logo.jpg" alt="Event Logo" width="150">
+            <p><strong>XHTML:</strong></p>
+            <img src="images/logo.jpg" alt="Event Logo" width="150" />
+        </section>
 
         <footer>
-            <p>
-                Built with advanced HTML Concepts &middot; InfoHub Sample &nbsp;&starf; &nbsp; &copy; 2026
-            </p>
+            <p> SMCC-CCIS Week X Natzui Technologies </p>
         </footer>
 
     </div>
